@@ -485,6 +485,15 @@ main.login { max-width: 340px; padding-top: 2.5rem; }
 .dialogo .boton.gravedad { background: var(--panel-claro); color: var(--texto); }
 .dialogo .boton.gravedad.activa { background: var(--oro); color: #1a1a12; }
 
+/* Aviso de licencia y código fuente (lo pide la cláusula 13 de la AGPL) */
+.pie-licencia {
+  text-align: center;
+  color: var(--texto-suave);
+  font-size: 0.75rem;
+  padding: 2rem 1rem 1rem;
+}
+.pie-licencia a { color: var(--texto-suave); }
+
 /* ----- Impresión de tickets ----- */
 
 #zona-ticket { display: none; }

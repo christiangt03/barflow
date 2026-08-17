@@ -193,3 +193,29 @@ como `data/db.json.migrado`.
   compañeros `bar.db-wal` y `bar.db-shm` si existen).
 
 Requiere Node.js 22.5 o más nuevo (usa el SQLite que trae Node de serie).
+
+## Licencia
+
+Copyright (C) 2026 christiangt03
+
+Este programa es software libre: puedes redistribuirlo y/o modificarlo bajo los
+términos de la **Licencia Pública General Affero de GNU (AGPL)**, en su versión
+3, tal como la publica la Free Software Foundation.
+
+Se distribuye con la esperanza de que sea útil, pero **SIN NINGUNA GARANTÍA**;
+ni siquiera la garantía implícita de comerciabilidad o adecuación a un fin
+concreto. Consulta la [Licencia Pública General Affero de GNU](LICENSE) para
+más detalles.
+
+En corto, y sin que esto sustituya al texto legal:
+
+- Puedes **usarla en tu bar, mirarla, modificarla y compartirla**, gratis.
+- Si repartes una versión modificada, o **la ofreces a otros a través de una
+  red**, tienes que poner tu código a disposición de esos usuarios, también
+  bajo AGPL (es la cláusula 13, lo que distingue a la AGPL de la GPL normal).
+- No hay garantía de ningún tipo: si la usas en tu negocio, es bajo tu
+  responsabilidad.
+
+¿Quieres usarla en un producto cerrado, sin las obligaciones de la AGPL? El
+titular de los derechos puede darte otra licencia distinta: abre una *issue*
+para hablarlo.

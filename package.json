@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Gestión de comandas para un bar-restaurante: camareros, cocina, barra y administración, en la red local",
   "main": "server.js",
+  "license": "AGPL-3.0-only",
   "engines": {
     "node": ">=22.5"
   },
