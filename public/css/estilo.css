@@ -1,0 +1,512 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --oro: #c9a227;
+  --oro-oscuro: #a8861d;
+  --plata: #b8bcc4;
+  --fondo: #14161a;
+  --panel: #1f232a;
+  --panel-claro: #2a2f38;
+  --texto: #f0f0ec;
+  --texto-suave: #9aa0aa;
+  --verde: #3fa056;
+  --rojo: #c94f3d;
+  --azul: #3e7cb1;
+}
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  font-family: -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: var(--fondo);
+  color: var(--texto);
+  min-height: 100vh;
+}
+
+header.barra-superior {
+  background: var(--panel);
+  padding: 0.7rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 2px solid var(--oro);
+}
+
+header.barra-superior h1 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  flex: 1;
+}
+
+header.barra-superior .subtitulo { color: var(--oro); font-size: 0.8rem; }
+
+.boton-volver {
+  background: var(--panel-claro);
+  border: none;
+  color: var(--texto);
+  font-size: 1.3rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+main { padding: 1rem; max-width: 900px; margin: 0 auto; }
+
+.boton {
+  display: block;
+  width: 100%;
+  border: none;
+  border-radius: 12px;
+  padding: 1rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: #fff;
+  background: var(--panel-claro);
+  text-align: center;
+  text-decoration: none;
+}
+
+.boton.oro { background: var(--oro); color: #1a1a12; }
+.boton.verde { background: var(--verde); }
+.boton.rojo { background: var(--rojo); }
+.boton.azul { background: var(--azul); }
+.boton:disabled { opacity: 0.45; cursor: not-allowed; }
+
+.rejilla { display: grid; gap: 0.8rem; }
+.rejilla.dos { grid-template-columns: 1fr 1fr; }
+.rejilla.tres { grid-template-columns: repeat(3, 1fr); }
+.rejilla.mesas { grid-template-columns: repeat(auto-fill, minmax(90px, 1fr)); }
+
+.tarjeta {
+  background: var(--panel);
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.mesa {
+  aspect-ratio: 1;
+  border: 2px solid var(--panel-claro);
+  border-radius: 12px;
+  background: var(--panel);
+  color: var(--texto);
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2rem;
+}
+
+.mesa.ocupada { border-color: var(--oro); background: #2c2716; }
+.mesa .importe { font-size: 0.75rem; font-weight: 400; color: var(--oro); }
+
+.pestanas { display: flex; gap: 0.4rem; margin-bottom: 1rem; }
+.pestanas button {
+  flex: 1;
+  padding: 0.6rem 0.3rem;
+  border: none;
+  border-radius: 8px;
+  background: var(--panel);
+  color: var(--texto-suave);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.pestanas button.activa { background: var(--oro); color: #1a1a12; }
+
+.categoria-titulo {
+  color: var(--oro);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin: 1.1rem 0 0.5rem;
+}
+
+.articulo {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: var(--panel);
+  border: none;
+  border-radius: 10px;
+  padding: 0.75rem 0.9rem;
+  margin-bottom: 0.45rem;
+  color: var(--texto);
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: left;
+}
+
+.articulo .nombre { flex: 1; }
+.articulo .precio { color: var(--oro); font-weight: 700; white-space: nowrap; }
+
+.articulo.no-disponible {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.articulo.no-disponible .aviso {
+  display: block;
+  color: var(--rojo);
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.linea-comanda {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.55rem 0;
+  border-bottom: 1px solid var(--panel-claro);
+  font-size: 0.95rem;
+}
+.linea-comanda .cantidad { color: var(--oro); font-weight: 700; min-width: 2rem; }
+.linea-comanda .nombre { flex: 1; }
+.linea-comanda .detalle { display: block; color: var(--texto-suave); font-size: 0.8rem; }
+.linea-comanda .nota { display: block; color: var(--oro); font-size: 0.8rem; }
+.linea-comanda .anotar {
+  background: var(--panel-claro);
+  border: none;
+  border-radius: 6px;
+  width: 1.9rem;
+  height: 1.9rem;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+.linea-comanda .quitar {
+  background: var(--rojo);
+  border: none;
+  color: #fff;
+  border-radius: 6px;
+  width: 1.9rem;
+  height: 1.9rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.total-fila {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.25rem;
+  font-weight: 700;
+  padding: 0.8rem 0;
+}
+.total-fila .cifra { color: var(--oro); }
+
+.barra-inferior {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--panel);
+  border-top: 1px solid var(--panel-claro);
+  padding: 0.7rem 1rem calc(0.7rem + env(safe-area-inset-bottom));
+  display: flex;
+  gap: 0.7rem;
+  align-items: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.con-barra-inferior { padding-bottom: 6rem; }
+
+.etiqueta { font-size: 0.85rem; color: var(--texto-suave); margin-bottom: 0.3rem; display: block; }
+
+input[type="text"], input[type="number"], select {
+  width: 100%;
+  padding: 0.6rem;
+  border-radius: 8px;
+  border: 1px solid var(--panel-claro);
+  background: var(--fondo);
+  color: var(--texto);
+  font-size: 1rem;
+}
+
+.insignia {
+  display: inline-block;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+.insignia.terraza { background: #2e5d3a; }
+.insignia.dentro { background: #58421b; }
+.insignia.barra { background: #274b66; }
+
+/* ----- Cocina ----- */
+
+.rejilla-cocina {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.comanda {
+  background: var(--panel);
+  border-radius: 12px;
+  padding: 1rem;
+  border-top: 5px solid var(--oro);
+  display: flex;
+  flex-direction: column;
+}
+.comanda.lista { border-top-color: var(--verde); opacity: 0.75; }
+
+.comanda .cabecera {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.6rem;
+}
+.comanda .mesa-nombre { font-size: 1.25rem; font-weight: 800; }
+.comanda .hora { color: var(--texto-suave); font-size: 0.85rem; }
+.comanda ul { list-style: none; flex: 1; margin-bottom: 0.8rem; }
+.comanda li { padding: 0.3rem 0; border-bottom: 1px dashed var(--panel-claro); font-size: 1.02rem; }
+.comanda li .detalle { display: block; color: var(--plata); font-size: 0.85rem; padding-left: 1.4rem; }
+.comanda li .nota { display: block; color: var(--oro); font-size: 0.85rem; padding-left: 1.4rem; }
+
+.vacio { text-align: center; color: var(--texto-suave); padding: 3rem 1rem; font-size: 1.05rem; }
+
+/* ----- Camarero: platos + resumen de la comanda ----- */
+
+/* La celda derecha se estira a toda la altura para que el resumen
+   pueda quedarse pegado arriba mientras se baja por la carta */
+.panel-mesa { display: grid; gap: 1rem; }
+.panel-mesa .resumen-comanda { margin-top: 1.2rem; }
+.solo-ancho { display: none; }
+
+@media (min-width: 800px) {
+  .panel-mesa { grid-template-columns: 1fr 340px; }
+  .panel-mesa .resumen-comanda {
+    margin-top: 1.1rem;
+    position: sticky;
+    top: 4.2rem; /* debajo de la barra superior */
+    max-height: calc(100vh - 5.5rem);
+    overflow-y: auto;
+  }
+  .solo-ancho { display: block; }
+}
+
+/* ----- Almacén ----- */
+
+.stock-aviso {
+  border-left: 4px solid var(--rojo);
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.alm-btn {
+  background: var(--panel-claro);
+  border: none;
+  color: #fff;
+  border-radius: 6px;
+  width: 2.1rem;
+  height: 2.1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.alm-btn.verde { background: var(--verde); }
+.alm-btn.rojo { background: var(--rojo); }
+.alm-btn.azul { background: var(--azul); }
+
+.movimiento {
+  padding: 0.45rem 0.2rem;
+  border-bottom: 1px solid var(--panel-claro);
+  font-size: 0.88rem;
+  color: var(--texto);
+}
+.movimiento .quien {
+  display: block;
+  color: var(--texto-suave);
+  font-size: 0.78rem;
+}
+
+/* ----- Pantalla de entrada (código personal) ----- */
+
+main.login { max-width: 340px; padding-top: 2.5rem; }
+
+.pin-puntos {
+  display: flex;
+  justify-content: center;
+  gap: 0.7rem;
+  margin: 1.2rem 0 0.6rem;
+}
+.pin-puntos span {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  border: 2px solid var(--plata);
+}
+.pin-puntos span.lleno { background: var(--oro); border-color: var(--oro); }
+
+.pin-error {
+  text-align: center;
+  color: var(--rojo);
+  font-size: 0.9rem;
+  font-weight: 600;
+  min-height: 1.3rem;
+  margin-bottom: 0.6rem;
+}
+
+.pin-teclado {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.7rem;
+}
+.pin-teclado button {
+  aspect-ratio: 1.35;
+  border: none;
+  border-radius: 12px;
+  background: var(--panel);
+  color: var(--texto);
+  font-size: 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.pin-teclado button:active { background: var(--panel-claro); }
+.pin-teclado button.ok { background: var(--verde); }
+
+/* ----- Aviso flotante ----- */
+
+.toast {
+  position: fixed;
+  left: 50%;
+  bottom: 1.5rem;
+  transform: translate(-50%, 1rem);
+  background: var(--oro);
+  color: #1a1a12;
+  font-weight: 700;
+  padding: 0.8rem 1.2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  opacity: 0;
+  transition: opacity 0.35s, transform 0.35s;
+  max-width: min(90vw, 500px);
+  text-align: center;
+}
+.toast.visible { opacity: 1; transform: translate(-50%, 0); }
+
+/* ----- Reparto cocina / barra ----- */
+
+.apunte-destino {
+  font-size: 0.85rem;
+  color: var(--plata);
+  background: var(--panel-claro);
+  border-radius: 6px;
+  padding: 0.3rem 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.apunte-destino.esperando { color: #1a1a12; background: var(--oro); font-weight: 700; }
+.apunte-destino.recogido { color: #fff; background: var(--verde); }
+.comanda.barra { border-top-color: var(--azul); }
+
+.resumen-comanda .reparto {
+  font-size: 0.85rem;
+  color: var(--plata);
+  text-align: center;
+  padding: 0.4rem 0;
+}
+
+/* Banda de bebidas listas en la pantalla del camarero */
+#por-recoger {
+  background: #3a2f10;
+  border-bottom: 2px solid var(--oro);
+  padding: 0.6rem 1rem;
+}
+#por-recoger .titulo-recoger { color: var(--oro); font-weight: 800; margin-bottom: 0.4rem; }
+.fila-recoger {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.35rem 0;
+  flex-wrap: wrap;
+}
+.fila-recoger .donde { font-weight: 700; white-space: nowrap; }
+.fila-recoger .que { flex: 1; color: var(--plata); font-size: 0.9rem; min-width: 8rem; }
+.fila-recoger .boton { width: auto; padding: 0.4rem 0.9rem; font-size: 0.9rem; }
+
+/* Aviso de que el navegador todavía tiene el sonido bloqueado */
+.aviso-audio {
+  background: var(--rojo);
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+  padding: 0.6rem 1rem;
+}
+
+/* ----- Avisos de stock ----- */
+
+.boton-aviso-stock { width: auto; padding: 0.45rem 0.8rem; font-size: 0.9rem; margin-left: auto; }
+
+.chapa {
+  display: inline-block;
+  background: var(--rojo);
+  color: #fff;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.05rem 0.4rem;
+  margin-left: 0.25rem;
+  vertical-align: middle;
+}
+
+.alerta-stock.poco { border-left: 4px solid var(--oro); }
+.alerta-stock.agotado { border-left: 4px solid var(--rojo); }
+
+/* ----- Ventana emergente ----- */
+
+.fondo-dialogo {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  z-index: 200;
+}
+.dialogo {
+  background: var(--panel);
+  border: 1px solid var(--panel-claro);
+  border-radius: 12px;
+  padding: 1.1rem;
+  width: min(96vw, 420px);
+  max-height: 90vh;
+  overflow-y: auto;
+}
+.botones-quitar { grid-template-columns: 1fr 1fr; }
+.botones-quitar .boton { padding: 0.7rem 0.5rem; }
+.dialogo .boton.gravedad { background: var(--panel-claro); color: var(--texto); }
+.dialogo .boton.gravedad.activa { background: var(--oro); color: #1a1a12; }
+
+/* ----- Impresión de tickets ----- */
+
+#zona-ticket { display: none; }
+
+@media print {
+  body > *:not(#zona-ticket) { display: none !important; }
+  body { background: #fff; color: #000; }
+  #zona-ticket {
+    display: block;
+    width: 72mm;
+    font-family: "Courier New", monospace;
+    font-size: 11pt;
+    color: #000;
+  }
+  #zona-ticket h2 { text-align: center; font-size: 12pt; margin-bottom: 2mm; }
+  #zona-ticket .grande { font-size: 16pt; font-weight: bold; text-align: center; margin: 2mm 0; }
+  #zona-ticket hr { border: none; border-top: 1px dashed #000; margin: 2mm 0; }
+  #zona-ticket ul { list-style: none; }
+  #zona-ticket li { margin-bottom: 1.5mm; }
+  #zona-ticket .detalle { padding-left: 5mm; font-size: 10pt; }
+  /* Cuenta del cliente e informe Z: concepto a la izquierda, importe a la derecha */
+  #zona-ticket .fila-cuenta { display: flex; justify-content: space-between; gap: 3mm; margin-bottom: 1mm; }
+  #zona-ticket .fila-cuenta .concepto { flex: 1; }
+  #zona-ticket .grande-total { font-size: 14pt; font-weight: bold; margin: 2mm 0; }
+}

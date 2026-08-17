@@ -1,0 +1,424 @@
+{
+  "siguienteId": 100,
+  "config": {
+    "nombre": "Mi Bar",
+    "direccion": "",
+    "zonas": [
+      {
+        "id": "terraza",
+        "nombre": "Terraza",
+        "mesas": 10
+      },
+      {
+        "id": "dentro",
+        "nombre": "Dentro",
+        "mesas": 12
+      },
+      {
+        "id": "barra",
+        "nombre": "Barra",
+        "mesas": 8
+      }
+    ],
+    "menuDia": {
+      "precio1Plato": 11.5,
+      "precio2Platos": 14.5,
+      "nota": "Incluye pan, bebida y postre o café"
+    }
+  },
+  "articulos": [
+    {
+      "id": 1,
+      "nombre": "Calamares fritos",
+      "categoria": "Mariscos",
+      "precio": 12.5,
+      "tipo": "carta",
+      "subtipo": null,
+      "disponible": true,
+      "motivo": ""
+    },
+    {
+      "id": 2,
+      "nombre": "Gambas al ajillo",
+      "categoria": "Mariscos",
+      "precio": 13,
+      "tipo": "carta",
+      "subtipo": null,
+      "disponible": true,
+      "motivo": ""
+    },
+    {
+      "id": 3,
+      "nombre": "Sepia a la plancha",
+      "categoria": "Mariscos",
+      "precio": 12,
+      "tipo": "carta",
+      "subtipo": null,
+      "disponible": true,
+      "motivo": ""
+    },
+    {
+      "id": 4,
+      "nombre": "Boquerones en vinagre",
+      "categoria": "Mariscos",
+      "precio": 8.5,
+      "tipo": "carta",
+      "subtipo": null,
+      "disponible": true,
+      "motivo": ""
+    },
+    {
+      "id": 5,
+      "nombre": "Tortilla de patatas",
+      "categoria": "Raciones",
+      "precio": 9,
+      "tipo": "carta",
+      "subtipo": null,
+      "disponible": true,
+      "motivo": ""
+    },
+    {
+      "id": 6,
+      "nombre": "Croquetas caseras (8 uds)",
+      "categoria": "Raciones",
+      "precio": 9.5,
+      "tipo": "carta",
+      "subtipo": null,
+      "disponible": true,
+      "motivo": ""
+    },
+    {
+      "id": 7,
+      "nombre": "Oreja a la plancha",
+      "categoria": "Raciones",
+      "precio": 10,
+      "tipo": "carta",
+      "subtipo": null,
+      "disponible": true,
+      "motivo": ""
+    },
+    {
+      "id": 8,
+      "nombre": "Callos a la madrileña",
+      "categoria": "Raciones",
+      "precio": 11,
+      "tipo": "carta",
+      "subtipo": null,
+      "disponible": true,
+      "motivo": ""
+    },
+    {
+      "id": 9,
+      "nombre": "Ensaladilla rusa",
+      "categoria": "Raciones",
+      "precio": 8,
+      "tipo": "carta",
+      "subtipo": null,
+      "disponible": true,
+      "motivo": ""
+    },
+    {
+      "id": 10,
+      "nombre": "Patatas bravas",
+      "categoria": "Raciones",
+      "precio": 6.5,
+      "tipo": "carta",
+      "subtipo": null,
+      "disponible": true,
+      "motivo": ""
+    },
+    {
+      "id": 11,
+      "nombre": "Entrecot a la plancha",
+      "categoria": "Carnes",
+      "precio": 17.5,
+      "tipo": "carta",
+      "subtipo": null,
+      "disponible": true,
+      "motivo": ""
+    },
+    {
+      "id": 12,
+      "nombre": "Secreto ibérico",
+      "categoria": "Carnes",
+      "precio": 15,
+      "tipo": "carta",
+      "subtipo": null,
+      "disponible": true,
+      "motivo": ""
+    },
+    {
+      "id": 13,
+      "nombre": "Caña",
+      "categoria": "Bebidas",
+      "precio": 2,
+      "tipo": "carta",
+      "subtipo": null,
+      "disponible": true,
+      "motivo": ""
+    },
+    {
+      "id": 14,
+      "nombre": "Doble",
+      "categoria": "Bebidas",
+      "precio": 2.8,
+      "tipo": "carta",
+      "subtipo": null,
+      "disponible": true,
+      "motivo": ""
+    },
+    {
+      "id": 15,
+      "nombre": "Copa de vino",
+      "categoria": "Bebidas",
+      "precio": 2.5,
+      "tipo": "carta",
+      "subtipo": null,
+      "disponible": true,
+      "motivo": ""
+    },
+    {
+      "id": 16,
+      "nombre": "Refresco",
+      "categoria": "Bebidas",
+      "precio": 2.4,
+      "tipo": "carta",
+      "subtipo": null,
+      "disponible": true,
+      "motivo": ""
+    },
+    {
+      "id": 17,
+      "nombre": "Agua",
+      "categoria": "Bebidas",
+      "precio": 1.8,
+      "tipo": "carta",
+      "subtipo": null,
+      "disponible": true,
+      "motivo": ""
+    },
+    {
+      "id": 18,
+      "nombre": "Café",
+      "categoria": "Bebidas",
+      "precio": 1.5,
+      "tipo": "carta",
+      "subtipo": null,
+      "disponible": true,
+      "motivo": ""
+    },
+    {
+      "id": 19,
+      "nombre": "Tarta de queso",
+      "categoria": "Postres",
+      "precio": 5,
+      "tipo": "carta",
+      "subtipo": null,
+      "disponible": true,
+      "motivo": ""
+    },
+    {
+      "id": 20,
+      "nombre": "Flan casero",
+      "categoria": "Postres",
+      "precio": 4,
+      "tipo": "carta",
+      "subtipo": null,
+      "disponible": true,
+      "motivo": ""
+    },
+    {
+      "id": 40,
+      "nombre": "Lentejas estofadas",
+      "categoria": "Menú del día",
+      "precio": 0,
+      "tipo": "menu",
+      "subtipo": "primero",
+      "disponible": true,
+      "motivo": ""
+    },
+    {
+      "id": 41,
+      "nombre": "Ensalada mixta",
+      "categoria": "Menú del día",
+      "precio": 0,
+      "tipo": "menu",
+      "subtipo": "primero",
+      "disponible": true,
+      "motivo": ""
+    },
+    {
+      "id": 42,
+      "nombre": "Macarrones con tomate",
+      "categoria": "Menú del día",
+      "precio": 0,
+      "tipo": "menu",
+      "subtipo": "primero",
+      "disponible": true,
+      "motivo": ""
+    },
+    {
+      "id": 43,
+      "nombre": "Sopa castellana",
+      "categoria": "Menú del día",
+      "precio": 0,
+      "tipo": "menu",
+      "subtipo": "primero",
+      "disponible": true,
+      "motivo": ""
+    },
+    {
+      "id": 44,
+      "nombre": "Pollo asado con patatas",
+      "categoria": "Menú del día",
+      "precio": 0,
+      "tipo": "menu",
+      "subtipo": "segundo",
+      "disponible": true,
+      "motivo": ""
+    },
+    {
+      "id": 45,
+      "nombre": "Merluza a la romana",
+      "categoria": "Menú del día",
+      "precio": 0,
+      "tipo": "menu",
+      "subtipo": "segundo",
+      "disponible": true,
+      "motivo": ""
+    },
+    {
+      "id": 46,
+      "nombre": "Filete con patatas",
+      "categoria": "Menú del día",
+      "precio": 0,
+      "tipo": "menu",
+      "subtipo": "segundo",
+      "disponible": true,
+      "motivo": ""
+    },
+    {
+      "id": 47,
+      "nombre": "Albóndigas en salsa",
+      "categoria": "Menú del día",
+      "precio": 0,
+      "tipo": "menu",
+      "subtipo": "segundo",
+      "disponible": true,
+      "motivo": ""
+    },
+    {
+      "id": 48,
+      "nombre": "Flan",
+      "categoria": "Menú del día",
+      "precio": 0,
+      "tipo": "menu",
+      "subtipo": "postre",
+      "disponible": true,
+      "motivo": ""
+    },
+    {
+      "id": 49,
+      "nombre": "Natillas",
+      "categoria": "Menú del día",
+      "precio": 0,
+      "tipo": "menu",
+      "subtipo": "postre",
+      "disponible": true,
+      "motivo": ""
+    },
+    {
+      "id": 50,
+      "nombre": "Fruta del tiempo",
+      "categoria": "Menú del día",
+      "precio": 0,
+      "tipo": "menu",
+      "subtipo": "postre",
+      "disponible": true,
+      "motivo": ""
+    },
+    {
+      "id": 51,
+      "nombre": "Café",
+      "categoria": "Menú del día",
+      "precio": 0,
+      "tipo": "menu",
+      "subtipo": "postre",
+      "disponible": true,
+      "motivo": ""
+    }
+  ],
+  "pedidos": [],
+  "historial": [],
+  "anulaciones": [],
+  "sesiones": {},
+  "almacen": {
+    "productos": [
+      {
+        "id": 60,
+        "nombre": "Calamares",
+        "categoria": "Congelados",
+        "unidad": "kg",
+        "cantidad": 8,
+        "minimo": 3
+      },
+      {
+        "id": 61,
+        "nombre": "Croquetas",
+        "categoria": "Congelados",
+        "unidad": "uds",
+        "cantidad": 60,
+        "minimo": 20
+      },
+      {
+        "id": 62,
+        "nombre": "Pan (barras)",
+        "categoria": "Despensa",
+        "unidad": "uds",
+        "cantidad": 30,
+        "minimo": 10
+      },
+      {
+        "id": 63,
+        "nombre": "Aceite de oliva",
+        "categoria": "Despensa",
+        "unidad": "l",
+        "cantidad": 15,
+        "minimo": 5
+      },
+      {
+        "id": 64,
+        "nombre": "Patatas",
+        "categoria": "Despensa",
+        "unidad": "kg",
+        "cantidad": 25,
+        "minimo": 10
+      },
+      {
+        "id": 65,
+        "nombre": "Refrescos",
+        "categoria": "Bebidas",
+        "unidad": "botellas",
+        "cantidad": 48,
+        "minimo": 24
+      },
+      {
+        "id": 66,
+        "nombre": "Vino de la casa",
+        "categoria": "Bebidas",
+        "unidad": "botellas",
+        "cantidad": 18,
+        "minimo": 6
+      },
+      {
+        "id": 67,
+        "nombre": "Servilletas",
+        "categoria": "Limpieza y otros",
+        "unidad": "paquetes",
+        "cantidad": 12,
+        "minimo": 4
+      }
+    ],
+    "movimientos": []
+  }
+}

@@ -1,0 +1,13 @@
+node_modules/
+
+# Ajustes propios de cada local (nombre del bar, códigos iniciales...)
+.env
+
+# Base de datos: datos reales del negocio (ventas, empleados, códigos)
+data/db.json
+data/db.json.tmp
+data/db.json.migrado
+data/bar.db
+data/bar.db-wal
+data/bar.db-shm
+data/copias/

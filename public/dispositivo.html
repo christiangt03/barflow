@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Identificar aparato</title>
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body data-pantalla="Identificar aparato">
+  <header class="barra-superior">
+    <h1>📱 ¿Qué aparato es este?</h1>
+    <button class="boton-volver" id="btn-salir" title="Cerrar sesión">⏻</button>
+  </header>
+
+  <main style="max-width:520px">
+    <div id="contenido"></div>
+  </main>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="js/comun.js"></script>
+  <script src="js/dispositivo.js"></script>
+</body>
+</html>

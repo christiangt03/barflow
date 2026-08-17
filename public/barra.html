@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Barra</title>
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body data-pantalla="Barra">
+  <header class="barra-superior">
+    <button class="boton-volver" onclick="location.href='index.html'">‹</button>
+    <h1>🍺 Barra</h1>
+    <label style="font-size:0.85rem;color:var(--texto-suave);display:flex;align-items:center;gap:0.3rem">
+      <input type="checkbox" id="imprimir-auto" style="width:auto"> Imprimir al marcar listo
+    </label>
+  </header>
+
+  <div id="aviso-audio" class="aviso-audio" style="display:none">
+    🔇 Toca la pantalla una vez para activar el pitido de las comandas
+  </div>
+
+  <main style="max-width:none">
+    <div id="lista-comandas" class="rejilla-cocina"></div>
+  </main>
+
+  <div id="zona-ticket"></div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="js/comun.js"></script>
+  <script src="js/alertas.js"></script>
+  <script src="js/barra.js"></script>
+</body>
+</html>

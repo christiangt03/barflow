@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestión</title>
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body data-pantalla="Gestión">
+  <header class="barra-superior">
+    <h1><span data-local="nombre"></span> <span class="subtitulo" data-local="direccion"></span></h1>
+    <span id="quien" class="subtitulo"></span>
+    <button class="boton-volver" id="btn-salir" title="Cerrar sesión">⏻</button>
+  </header>
+  <main>
+    <div class="rejilla" style="margin-top:2rem">
+      <a class="boton oro" href="camarero.html" style="padding:1.6rem">📱 Camareros<br><small style="font-weight:400">Tomar comandas y cobrar</small></a>
+      <a class="boton azul" href="cocina.html" style="padding:1.6rem">👩‍🍳 Cocina<br><small style="font-weight:400">Pantalla de comandas</small></a>
+      <a class="boton azul" href="barra.html" style="padding:1.6rem">🍺 Barra<br><small style="font-weight:400">Bebidas y avisos a sala</small></a>
+      <a class="boton" href="admin.html" id="enlace-admin" style="padding:1.6rem;display:none">⚙️ Administración<br><small style="font-weight:400">Carta, disponibilidad y caja</small></a>
+    </div>
+  </main>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="js/comun.js"></script>
+  <script>
+    document.getElementById('btn-salir').onclick = cerrarSesion;
+    cargarSesion().then((yo) => {
+      if (!yo) return;
+      document.getElementById('quien').textContent = '👤 ' + yo.nombre;
+      if (yo.rol === 'gerente') document.getElementById('enlace-admin').style.display = '';
+    });
+  </script>
+</body>
+</html>

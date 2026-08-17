@@ -1,0 +1,17 @@
+{
+  "name": "app-bar-gestion",
+  "version": "1.0.0",
+  "description": "Gestión de comandas para un bar-restaurante: camareros, cocina, barra y administración, en la red local",
+  "main": "server.js",
+  "engines": {
+    "node": ">=22.5"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test \"pruebas/*.test.js\""
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "socket.io": "^4.7.5"
+  }
+}

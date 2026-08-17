@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Administración</title>
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body data-pantalla="Administración">
+  <header class="barra-superior">
+    <button class="boton-volver" onclick="location.href='index.html'">‹</button>
+    <h1>⚙️ Administración</h1>
+  </header>
+
+  <main>
+    <div class="pestanas">
+      <button data-p="alertas">Avisos <span id="chapa-alertas" class="chapa" style="display:none">0</span></button>
+      <button data-p="disponibilidad" class="activa">Disponibilidad</button>
+      <button data-p="carta">Editar carta</button>
+      <button data-p="menu">Menú del día</button>
+      <button data-p="caja">Caja</button>
+      <button data-p="almacen">Almacén</button>
+      <button data-p="empleados">Empleados</button>
+      <button data-p="dispositivos">Dispositivos <span id="chapa-dispositivos" class="chapa" style="display:none">0</span></button>
+    </div>
+    <div id="panel"></div>
+  </main>
+
+  <div id="zona-ticket"></div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="js/comun.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>
