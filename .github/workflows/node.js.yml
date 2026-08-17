@@ -16,8 +16,9 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [18.x, 20.x, 22.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+        # La app usa el SQLite que viene con Node (node:sqlite), que no existe
+        # antes de la 22.5: en 18 y 20 ni siquiera arranca.
+        node-version: [22.x, 24.x]
 
     steps:
     - uses: actions/checkout@v4
@@ -27,5 +28,4 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm ci
-    - run: npm run build --if-present
     - run: npm test
