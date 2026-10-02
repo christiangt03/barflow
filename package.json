@@ -1,5 +1,5 @@
 {
-  "name": "app-bar-gestion",
+  "name": "barflow",
   "version": "1.0.0",
   "description": "Gestión de comandas para un bar-restaurante: camareros, cocina, barra y administración, en la red local",
   "main": "server.js",

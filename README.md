@@ -1,4 +1,4 @@
-# App de gestión de comandas para un bar
+# BarFlow — TPV y gestión de comandas en tiempo real
 
 App para llevar los pedidos de un bar-restaurante: los camareros toman las
 comandas desde el móvil, la cocina y la barra las ven en una pantalla en
